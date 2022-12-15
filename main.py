@@ -254,3 +254,10 @@ def live (self,day):
     elif dice == 4:
         print("Time for treats!")
         self.shopping(manage="delicacies")
+
+#People
+nick = People(name="Nick")
+
+for day  in range(1,8):
+    if nick.live(day) == False:
+        break
