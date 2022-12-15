@@ -12,7 +12,7 @@ class People:
         self.car = car
         self.home = home
 
-#Def
+#Def_get
 
     def get_home(self):
         pass
@@ -56,7 +56,7 @@ brands_of_car = {
  "Volvo" :{"fuel":70, "strength":150,"consumption": 8},
  "Ferrari" :{"fuel":80, "strength":120,"consumption": 14}, }
 
-#Drive
+#Def_Drive
 
 def drive(self):
         if self.strengh>0 and self.fuel>=self.consumption:
@@ -108,7 +108,7 @@ def get_job(self):
         return
     self.job = Job(job_list)
 
-#Eat
+#def_Eat
 
 def eat(self):
     if self.home.food <=0:
@@ -136,7 +136,7 @@ def work(self):
     self.gladness -= self.job.gladnees_less
     self.satiety -=4
 
-#Metod Byu
+#Metod_shopping
 
 def shopping(self, manage):
     if self.car.drive():
@@ -161,7 +161,7 @@ def shopping(self, manage):
             self.satiety+=2
             self.money-=15
 
-#Metod Chill
+#Metod_Chill
 
 def chill(self):
     self.gladness+=10
@@ -173,7 +173,7 @@ def to_repair(self):
     self.car.strenght+=100
     self.money-=50
 
-#Parametr vivod
+#Parameters_print
 
 def days_indexes(self,day):
     day = f"Today the {day} of {self.name}'s life"
@@ -194,6 +194,7 @@ def days_indexes(self,day):
     print(f"{car_indexes:50}", "\n")
     print(f"Fuel - {self.car.fuel}")
     print(f"Strenght - {self.car.strenght}")
+
 #Def alive
 def is_alive(self):
     if self.gladness<0:
@@ -205,6 +206,7 @@ def is_alive(self):
     if self.money<-500:
         print("Bankrupt...")
         return False
+
 #Simyliation
 def live (self,day):
     if self.is_alive() == False:
@@ -220,7 +222,7 @@ def live (self,day):
         print(f"I don't have a job,I'm going to get  a job {self.job.job} with salary {self.job.salary}")
         self.days_indexes(day)
 
-#Zanatia day
+#Work_day
 
     dice = random.randint(1,4)
     if self.satiety<20:
@@ -240,7 +242,7 @@ def live (self,day):
         print("I need to repair my car")
         self.to_repair()
 
-#Don dice
+#Elif_dice
 
     elif dice == 1:
         print("Let's chill")
